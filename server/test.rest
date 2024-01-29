@@ -1,0 +1,62 @@
+POST http://localhost:5000/item/insert
+Content-Type: application/json
+
+{
+    "ItemName": "Dhosa",
+    "ItemPrice": 150,
+    "ItemImage": "dhosa.jpg"
+}
+
+
+###
+
+GET http://localhost:5000/Order/search?query=8
+
+###
+
+PATCH http://localhost:5000/OrderCart/update/6
+Content-Type: application/json
+
+{
+    "ItemQuantity": 3
+}
+
+###
+
+DELETE  http://localhost:5000/post/delete/4
+
+###
+
+POST http://localhost:5000/Order/insert
+Content-Type: application/json
+
+{
+    "TableNo": 1,
+    "CustomerName":"Riddhi",
+    "Contact":6785678976,
+    "NoOfMembers":2,
+    "OrderDate":"2022-01-24",
+    "OrderTime":"08:12:23",
+    "Items":[
+        {
+            "ItemName":"Pizza",
+            "ItemQuantity":3
+        },
+        {
+            "ItemName":"burger",
+            "ItemQuantity":3
+        }
+    ]
+}
+
+
+
+
+
+
+###
+
+GET http://localhost:5000/comment/2
+
+###
+
