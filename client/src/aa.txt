@@ -1,0 +1,55 @@
+import React, { useState } from 'react';
+import { Form, InputNumber, Button } from 'antd';
+
+const Cart = () => {
+  const [form] = Form.useForm();
+  const [cartItems, setCartItems] = useState([
+    { id: 1, name: 'Item 1', quantity: 2 },
+    { id: 2, name: 'Item 2', quantity: 1 },
+  ]);
+
+  const handleQuantityChange = (itemId, newQuantity) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === itemId ? { ...item, quantity: newQuantity } : item
+      )
+    );
+  };
+
+  const handleIncrement = (itemId) => {
+    handleQuantityChange(itemId, cartItems.find((item) => item.id === itemId).quantity + 1);
+  };
+
+  const handleDecrement = (itemId) => {
+    const currentQuantity = cartItems.find((item) => item.id === itemId).quantity;
+    const newQuantity = currentQuantity > 1 ? currentQuantity - 1 : 1;
+    handleQuantityChange(itemId, newQuantity);
+  };
+
+  const handleSubmit = () => {
+    // Implement logic to submit the cart
+  };
+
+  return (
+    <Form form={form} onFinish={handleSubmit}>
+      {cartItems.map((item) => (
+        <Form.Item label={item.name} key={item.id}>
+          <InputNumber
+            value={item.quantity}
+            min={1}
+            onChange={(value) => handleQuantityChange(item.id, value)}
+          />
+          <Button onClick={() => handleIncrement(item.id)}>+</Button>
+          <Button onClick={() => handleDecrement(item.id)}>-</Button>
+        </Form.Item>
+      ))}
+      <Form.Item>
+        <Button type="primary" htmlType="submit">
+          Update Cart
+        </Button>
+      </Form.Item>
+    </Form>
+  );
+};
+
+export default Cart;

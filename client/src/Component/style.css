@@ -1,0 +1,62 @@
+/*----------------------------------------------------------------------------- NavBar */
+
+.header{
+    background-image:linear-gradient(0.35turn, #62a862, #62a862,#62a862); 
+    color: rgb(22, 34, 3);
+    font-weight: bold;
+    font-size: 15px;
+    height: 70px;
+}
+
+.menu{
+    text-align: center;
+    justify-content: center;
+    background-image:linear-gradient(0.35turn, #62a862, #ebf8e1,#62a862); 
+    width: 200px;
+}
+
+.logo{
+    font-style: italic;
+    margin-left: 40px;
+    font-family: 'Brush Script MT, Brush Script Std, cursive';
+    font-size: 35PX;
+}   
+
+.body{
+    background-image:linear-gradient(0.35turn, #1e201d, #030a02,#1e201d); 
+    height: 100vh;
+    padding: 20px;
+}
+
+/*----------------------------------------------------------------------------- Home */
+
+.content{
+    text-align: left;
+    font-size: 60px;
+    margin-top:150px;
+}
+
+.sider{
+    margin-top: 100px;
+}
+
+.content-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    padding-top: 5px;
+    margin-left: 20px;
+    word-spacing: 20px;
+    letter-spacing: 4px;
+    color: rgb(100, 237, 162);
+    height: 40px;
+}
+
+/*-----------------------------------------------------------------------------add Order */
+.tableBorder{
+    border: 1px solid black;
+
+}
+
+.searchOrder{
+    margin-left: 800px;
+}
