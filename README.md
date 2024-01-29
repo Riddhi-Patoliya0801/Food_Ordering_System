@@ -14,3 +14,6 @@ views
 4.add order (Customer details )page
 5.Update order page
 6.View all order and view paticular order by search page
+
+Note  :  hange the Port Number Of Mysql Server inside the server/config/config.json as per your running mysql server port
+E.x. ("Port":3307 [that is my mysql server port])
