@@ -11,24 +11,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 function App() {
+	return (
+		<div className="App">
+			<Navbar />
 
-  return (
-    <div className="App">
-      <Navbar />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<ItemMenu />} />
-        <Route path="/order" element={<Order />} />
-        <Route path="/CustomerDetails" element={<CustomerDetails />} />
-        <Route path="/ViewAllOrder" element={<ViewAllOrder />} />
-        <Route
-          path="/updateCustomerDetail/:id"
-          element={<EditCustomerDetails />}
-        />
-      </Routes>
-    </div>
-  );
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/menu" element={<ItemMenu />} />
+				<Route path="/order" element={<Order />} />
+				<Route path="/CustomerDetails" element={<CustomerDetails />} />
+				{/* <Route path="/ViewAllOrder" element={<ViewAllOrder />} /> */}
+				<Route
+					path="/updateCustomerDetail/:id"
+					element={<EditCustomerDetails />}
+				/>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
