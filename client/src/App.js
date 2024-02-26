@@ -20,7 +20,7 @@ function App() {
 				<Route path="/menu" element={<ItemMenu />} />
 				<Route path="/order" element={<Order />} />
 				<Route path="/CustomerDetails" element={<CustomerDetails />} />
-				{/* <Route path="/ViewAllOrder" element={<ViewAllOrder />} /> */}
+				<Route path="/ViewAllOrder" element={<ViewAllOrder />} />
 				<Route
 					path="/updateCustomerDetail/:id"
 					element={<EditCustomerDetails />}
